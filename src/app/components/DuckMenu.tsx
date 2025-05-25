@@ -121,10 +121,10 @@ export const DuckMenu = ({
     }
   };
   
-  const { containerSize, radius, itemSize, iconSize, centerSize, arrowSize, arrowPadding } = config[screenSize];
+  const { containerSize, radius, itemSize, iconSize, centerSize, arrowSize, arrowPadding } = config[screenSize as keyof typeof config];
   const center = containerSize / 2;
   
-  const spinToIndex = (targetIndex) => {
+  const spinToIndex = (targetIndex: any) => {
     if (isSpinning) return;
     
     setIsSpinning(true);
@@ -354,11 +354,21 @@ export const DuckMenu = ({
               </div>
               
               {/* Order button */}
-              <button className="group relative inline-flex items-center px-8 py-4 text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-blue-500 to-blue-600 rounded-full hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
-                <span className="relative z-10">Order Now</span>
-                <div className="absolute right-4 top-1/2 transform -translate-y-1/2 transition-transform group-hover:translate-x-1">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m0 0h8" />
+              <button className="w-72 group relative inline-flex items-center justify-center gap-3 px-8 py-4 text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-blue-500 to-blue-600 rounded-full hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                <span className="relative z-10 animate-pulse">Order Now</span>
+                <div className="absolute right-6 top-1/2 transform -translate-y-1/2 transition-transform duration-300 group-hover:translate-x-2">
+                  <svg 
+                    className="w-5 h-5" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m0 0h8" 
+                    />
                   </svg>
                 </div>
                 <div className="absolute inset-0 rounded-full bg-blue-400 transform scale-0 group-hover:scale-110 transition-transform duration-300 opacity-20"></div>
