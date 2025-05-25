@@ -381,7 +381,7 @@ export const DuckMenu = ({
               </div>
               
               {/* Order button */}
-              <button className="w-82 group relative inline-flex items-center justify-center gap-3 px-8 py-4 text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-blue-500 to-blue-600 rounded-full hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+              <button className="w-82 group relative inline-flex items-center justify-center gap-3 px-8 py-4 text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-[#FDBB43] to-[#fca311] rounded-full hover:from-[#fca311] hover:to-[#fb8500] transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
                 <span className="relative z-10 animate-pulse">{menuItems[selectedIndex].callToAction}</span>
                 <div className="absolute right-6 top-1/2 transform -translate-y-1/2 transition-transform duration-300 group-hover:translate-x-2">
                   <svg 
@@ -398,7 +398,7 @@ export const DuckMenu = ({
                     />
                   </svg>
                 </div>
-                <div className="absolute inset-0 rounded-full bg-blue-400 transform scale-0 group-hover:scale-110 transition-transform duration-300 opacity-20"></div>
+                <div className="absolute inset-0 rounded-full bg-[#FDBB43] transform scale-0 group-hover:scale-110 transition-transform duration-300 opacity-20"></div>
               </button>
             </div>
           </div>
