@@ -11,11 +11,7 @@ export default function PromoHeader() {
         <div className="flex items-center justify-center py-3 text-sm font-medium">
           <div className="flex flex-col sm:flex-row items-center sm:space-x-2 text-center">
             <span>
-              <strong>¡Oferta especial!</strong> Obtén un 30% de descuento en toda la tienda
-            </span>
-            <span className="hidden sm:inline">•</span>
-            <span className="text-blue-200 mt-1 sm:mt-0">
-              Código: <strong className="text-white">DESCUENTO30</strong>
+              <strong>¡Oferta Especial Pre-Apertura!</strong> Obtén un 70% de descuento en tu primer pedido
             </span>
           </div>
           
