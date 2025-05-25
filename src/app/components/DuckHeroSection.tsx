@@ -84,7 +84,8 @@ export const DuckHeroSection = ({
   
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-blue-900 mb-12 max-w-2xl mx-auto leading-relaxed">
-            {subtitle}
+            <div>Si hay pato en la mesa,</div>
+            <div>que venga el sake y la sobremesa.</div>
           </p>
   
           {/* CTA Button */}

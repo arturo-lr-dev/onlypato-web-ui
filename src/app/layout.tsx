@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, League_Spartan } from "next/font/google";
+import { League_Spartan } from "next/font/google";
 import "./globals.css";
 import "./fonts.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const geistSans = League_Spartan({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = League_Spartan({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const spartanSans = League_Spartan({
+  variable: "--font-spartan-sans"
 });
 
 export const metadata: Metadata = {
@@ -25,9 +19,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${spartanSans.variable} antialiased`}
       >
         {children}
         <SpeedInsights />
