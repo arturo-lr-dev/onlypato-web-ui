@@ -14,7 +14,7 @@ export const DuckMenu = ({
       description: "Gyozas, alitas y arepa de pato. Todo lo que necesitas para darte un homenaje sin compartir ni explicar.",
       concept: "Individual. Autocomplaciente. Decadente.",
       callToAction: "Me lo merezco",
-      image: "🥟"
+      image: "/ducks/1.png"
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ export const DuckMenu = ({
       description: "Jamón de pato curado, ensalada fresca y confit ligero. Sano, sabroso y sin remordimientos.",
       concept: "Equilibrado. Proteico. Consciente.",
       callToAction: "Fit pero con sabor",
-      image: "💪"
+      image: "/ducks/2.png"
     },
     {
       id: 3,
@@ -30,7 +30,8 @@ export const DuckMenu = ({
       description: "Un menú generoso para compartir: variedad de platos de pato y final dulce.",
       concept: "Compartido. Íntimo. Para dos bocas felices.",
       callToAction: "Para compartir sin pelear",
-      image: "💕"
+      image: "/ducks/3.png"
+            
     },
     {
       id: 4,
@@ -38,7 +39,7 @@ export const DuckMenu = ({
       description: "Ensalada de magret ahumado, bresaola de pato y toques cítricos. Fresco, delicado y lleno de sabor. Y confit!",
       concept: "Ligero. Delicado. Amor a primera mordida.",
       callToAction: "Amor en versión ligera",
-      image: "🌿"
+      image: "/ducks/4.png"
     },
     {
       id: 5,
@@ -46,7 +47,7 @@ export const DuckMenu = ({
       description: "Para fans del pato sin límites: gyozas, ensalada y hasta Pekín.",
       concept: "Intenso. Completo. Para paladares sin miedo.",
       callToAction: "Lo quiero TODO de ti",
-      image: "🔥"
+      image: "/ducks/5.png"
     },
     {
       id: 6,
@@ -54,7 +55,7 @@ export const DuckMenu = ({
       description: "Jamón de pato curado, croquetas de miel y gouda y pato pekin : un bocado crujiente, uno cremoso, uno untuoso.",
       concept: "Degustación. Curioso. Para exploradores.",
       callToAction: "Pico fino, pico feliz",
-      image: "🎯"
+      image: "/ducks/6.png"
     },
     {
       id: 7,
@@ -62,7 +63,7 @@ export const DuckMenu = ({
       description: "Cuatro platos icónicos de la casa. Un recorrido por el universo Only PATO.",
       concept: "Experiencia. Ritual. Colección de clásicos.",
       callToAction: "Pídelo en nombre del arte",
-      image: "🎨"
+      image: "/ducks/7.png"
     },
     {
       id: 8,
@@ -70,7 +71,7 @@ export const DuckMenu = ({
       description: "El menú de grupo: generoso, sabroso y diseñado para que nadie se quede sin probar.",
       concept: "Festivo. Abundante. Perfecto para compartir.",
       callToAction: "Somos muchos y queremos pato",
-      image: "🎉"
+      image: "/ducks/8.png"
     }
   ],
   backgroundColor = "bg-blue-50",
@@ -297,7 +298,14 @@ export const DuckMenu = ({
                             : '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
                         }}
                       >
-                        <span className={iconSize}>{item.image}</span>
+                        {!item.image.includes('/') && <span className={iconSize}>{item.image}</span>}
+                        {item.image.includes('/') && <Image
+                          src={item.image}
+                          alt={item.name}
+                          width={itemSize}
+                          height={itemSize}
+                          className={`w-full h-full rounded-full object-cover ${iconSize}`}
+                        />}
                       </div>
                       
                       {/* Número del elemento */}
@@ -331,7 +339,7 @@ export const DuckMenu = ({
                   zIndex: 40
                 }}
               >
-                <Image src={'/duck.png'} alt={'Duck'} width={centerSize * 2} height={centerSize * 2} />
+                <Image src={'/duck.png'} alt={'Duck'} width={centerSize * 2} height={centerSize * 2} className='w-full h-full rounded-full' />
               </div>
             </div>
           </div>
@@ -340,9 +348,19 @@ export const DuckMenu = ({
           <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border-4 border-blue-200 max-w-md w-full mx-4 sm:mx-0">
             <div className="text-center">
               {/* Selected item image */}
-              <div className="text-6xl sm:text-8xl mb-4 sm:mb-6 animate-bounce">
-                {menuItems[selectedIndex].image}
-              </div>
+              {!menuItems[selectedIndex].image.includes('/') ? (
+                <span className="text-6xl sm:text-8xl mb-4 sm:mb-6 block">
+                  {menuItems[selectedIndex].image}
+                </span>
+              ) : (
+                <Image 
+                  src={menuItems[selectedIndex].image} 
+                  alt={menuItems[selectedIndex].name} 
+                  width={40} 
+                  height={40} 
+                  className="w-30 h-30 object-cover rounded-2xl mb-4 sm:mb-6 mx-auto"
+                />
+              )}
               
               {/* Decorative duck */}
               <div className="flex justify-center mb-4 sm:mb-6 opacity-30">
