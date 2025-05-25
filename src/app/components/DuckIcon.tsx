@@ -4,16 +4,16 @@ export const DuckIcon = ({ size = "normal" }) => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const duckRef = useRef(null);
   
-  const sizeClasses = {
+  const sizeClasses: any = {
     small: "w-8 h-8",
     normal: "w-16 h-16",
     large: "w-20 h-20"
   };
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: any) => {
       if (duckRef.current) {
-        const rect = duckRef.current.getBoundingClientRect();
+        const rect = (duckRef.current as HTMLDivElement).getBoundingClientRect();
         const duckCenterX = rect.left + rect.width / 2;
         const duckCenterY = rect.top + rect.height / 2;
         

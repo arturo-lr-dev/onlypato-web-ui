@@ -3,23 +3,23 @@ import React, { useState, useEffect } from 'react';
 const LiquidBlueButton = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-  const [ripples, setRipples] = useState([]);
+  const [ripples, setRipples] = useState<any>([]);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 200);
     return () => clearTimeout(timer);
   }, []);
 
-  const handleClick = (e) => {
+  const handleClick = (e: any) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     
     const newRipple = { x, y, id: Date.now() };
-    setRipples(prev => [...prev, newRipple]);
+    setRipples((prev: Array<{x: number; y: number; id: number}>) => [...prev, newRipple]);
     
     setTimeout(() => {
-      setRipples(prev => prev.filter(ripple => ripple.id !== newRipple.id));
+      setRipples((prev: Array<{x: number; y: number; id: number}>) => prev.filter(ripple => ripple.id !== newRipple.id));
     }, 800);
     
     console.log('Liquid CTA Button clicked!');
@@ -118,7 +118,7 @@ const LiquidBlueButton = () => {
           </span>
 
           {/* Click ripples */}
-          {ripples.map(ripple => (
+          {ripples.map((ripple: any) => (
             <div
               key={ripple.id}
               className="absolute rounded-full bg-white/30 pointer-events-none animate-ping"
