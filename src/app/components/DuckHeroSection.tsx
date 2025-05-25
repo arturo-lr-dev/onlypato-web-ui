@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { DuckIcon } from "./DuckIcon";
-import EnhancedCTAButton from "./LiquidBlueButton";
-import LiquidBlueButton from "./LiquidBlueButton";
+import LiquidGoldButton from "./LiquidGoldButton";
 
 export const DuckHeroSection = ({
     title = "Only Pato",
@@ -89,7 +88,7 @@ export const DuckHeroSection = ({
           </p>
   
           {/* CTA Button */}
-          <LiquidBlueButton />
+          <LiquidGoldButton />
   
           {/* Decorative elements */}
           <div className="absolute top-20 left-10 w-2 h-16 bg-blue-300 rounded-full opacity-60 animate-pulse"></div>

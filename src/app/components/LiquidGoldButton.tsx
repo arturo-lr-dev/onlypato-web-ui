@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const LiquidBlueButton = () => {
+const LiquidGoldButton = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [ripples, setRipples] = useState<any>([]);
@@ -31,7 +31,7 @@ const LiquidBlueButton = () => {
         {/* Subtle glow ring */}
         <div className={`
           absolute -inset-2 rounded-full
-          bg-gradient-to-r from-blue-400/20 to-blue-600/20
+          bg-gradient-to-r from-[#FDBB43]/20 to-[#FDBB43]/20
           transition-all duration-1000 ease-out
           ${isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}
           ${isHovered ? 'scale-110 opacity-40' : ''}
@@ -46,12 +46,12 @@ const LiquidBlueButton = () => {
             group relative overflow-hidden
             inline-flex items-center justify-center
             px-10 py-4 text-lg font-semibold text-white
-            bg-gradient-to-r from-blue-500 via-blue-600 to-blue-500
+            bg-gradient-to-r from-[#FDBB43] via-[#FDBB43] to-[#FDBB43]
             rounded-full
             transition-all duration-700 ease-out
             transform-gpu
             ${isLoaded ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-4 opacity-0 scale-90'}
-            ${isHovered ? 'scale-105 shadow-lg shadow-blue-500/30' : ''}
+            ${isHovered ? 'scale-105 shadow-lg shadow-[#FDBB43]/30' : ''}
             active:scale-95 active:duration-150
           `}
           style={{
@@ -62,7 +62,7 @@ const LiquidBlueButton = () => {
           {/* Liquid wave effect */}
           <div className={`
             absolute inset-0 
-            bg-gradient-to-r from-blue-400/30 via-transparent to-blue-400/30
+            bg-gradient-to-r from-[#FDBB43]/30 via-transparent to-[#FDBB43]/30
             transition-all duration-1000 ease-in-out
             ${isHovered ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}
           `}
@@ -74,7 +74,7 @@ const LiquidBlueButton = () => {
           {/* Morphing liquid blob */}
           <div className={`
             absolute inset-1 rounded-full
-            bg-gradient-to-br from-blue-300/20 to-blue-700/20
+            bg-gradient-to-br from-[#FDBB43]/20 to-[#FDBB43]/20
             transition-all duration-500 ease-out
             ${isHovered ? 'scale-110 opacity-100' : 'scale-0 opacity-0'}
           `}
@@ -145,7 +145,7 @@ const LiquidBlueButton = () => {
         {isHovered && (
           <>
             <div 
-              className="absolute w-1 h-1 bg-blue-300/60 rounded-full animate-bounce"
+              className="absolute w-1 h-1 bg-[#FDBB43]/60 rounded-full animate-bounce"
               style={{
                 top: '-8px',
                 left: '20%',
@@ -154,7 +154,7 @@ const LiquidBlueButton = () => {
               }}
             ></div>
             <div 
-              className="absolute w-1.5 h-1.5 bg-blue-400/40 rounded-full animate-bounce"
+              className="absolute w-1.5 h-1.5 bg-[#FDBB43]/40 rounded-full animate-bounce"
               style={{
                 top: '-12px',
                 right: '25%',
@@ -163,7 +163,7 @@ const LiquidBlueButton = () => {
               }}
             ></div>
             <div 
-              className="absolute w-1 h-1 bg-blue-200/50 rounded-full animate-bounce"
+              className="absolute w-1 h-1 bg-[#FDBB43]/50 rounded-full animate-bounce"
               style={{
                 bottom: '-6px',
                 left: '70%',
@@ -207,4 +207,4 @@ const LiquidBlueButton = () => {
   );
 };
 
-export default LiquidBlueButton;
+export default LiquidGoldButton;
