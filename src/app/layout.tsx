@@ -5,7 +5,8 @@ import "./fonts.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const spartanSans = League_Spartan({
-  variable: "--font-spartan-sans"
+  variable: "--font-spartan-sans",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
