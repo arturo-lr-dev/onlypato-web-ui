@@ -3,6 +3,7 @@
 import React from 'react';
 import { DuckHeroSection } from '../components/DuckHeroSection';
 import PromoHeader from '../components/PromoHeader';
+import { DuckMenu } from '../components/DuckMenu';
 
 const Hero = () => {
   return (
@@ -17,6 +18,8 @@ const Hero = () => {
         duckCount={8}
         onButtonClick={() => alert('Custom button clicked!')}
       />
+
+      <DuckMenu />
     </div>
   );
 };
