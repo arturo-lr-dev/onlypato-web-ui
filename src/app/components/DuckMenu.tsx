@@ -2,10 +2,11 @@
 
 import React, { useState, useEffect } from 'react';
 import { DuckIcon } from './DuckIcon';
+import Image from 'next/image';
 
 export const DuckMenu = ({
-  title = "Our Menu",
-  subtitle = "Spin the wheel and discover our delicious options",
+  title = "Nuestros menus",
+  subtitle = "Descubre nuestra deliciosa carta de PlATOS",
   menuItems = [
     {
       id: 1,
@@ -330,7 +331,7 @@ export const DuckMenu = ({
                   zIndex: 40
                 }}
               >
-                <DuckIcon size={screenSize === 'mobile' ? "small" : "normal"} />
+                <Image src={'/duck.png'} alt={'Duck'} width={centerSize * 2} height={centerSize * 2} />
               </div>
             </div>
           </div>
