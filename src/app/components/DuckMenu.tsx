@@ -9,59 +9,67 @@ export const DuckMenu = ({
   menuItems = [
     {
       id: 1,
-      name: "Classic Pato Burger",
-      description: "Juicy duck burger with special sauce and fresh vegetables",
-      price: "$12.99",
-      image: "🍔"
+      name: "Pa Mí",
+      description: "Gyozas, alitas y arepa de pato. Todo lo que necesitas para darte un homenaje sin compartir ni explicar.",
+      concept: "Individual. Autocomplaciente. Decadente.",
+      callToAction: "Me lo merezco",
+      image: "🥟"
     },
     {
       id: 2,
-      name: "Pato Wings",
-      description: "Crispy duck wings with blue cheese dip",
-      price: "$9.99",
-      image: "🍗"
+      name: "Pato Fit",
+      description: "Jamón de pato curado, ensalada fresca y confit ligero. Sano, sabroso y sin remordimientos.",
+      concept: "Equilibrado. Proteico. Consciente.",
+      callToAction: "Fit pero con sabor",
+      image: "💪"
     },
     {
       id: 3,
-      name: "Duck Noodle Soup",
-      description: "Traditional soup with tender duck and fresh noodles",
-      price: "$14.99",
-      image: "🍜"
+      name: "Pa los Dos",
+      description: "Un menú generoso para compartir: variedad de platos de pato y final dulce.",
+      concept: "Compartido. Íntimo. Para dos bocas felices.",
+      callToAction: "Para compartir sin pelear",
+      image: "💕"
     },
     {
       id: 4,
-      name: "Pato Tacos",
-      description: "Three soft tacos filled with seasoned duck meat",
-      price: "$11.99",
-      image: "🌮"
+      name: "Pato Light & Love",
+      description: "Ensalada de magret ahumado, bresaola de pato y toques cítricos. Fresco, delicado y lleno de sabor. Y confit!",
+      concept: "Ligero. Delicado. Amor a primera mordida.",
+      callToAction: "Amor en versión ligera",
+      image: "🌿"
     },
     {
       id: 5,
-      name: "Duck Salad Bowl",
-      description: "Fresh greens with grilled duck and citrus dressing",
-      price: "$13.99",
-      image: "🥗"
+      name: "Pato Lover",
+      description: "Para fans del pato sin límites: gyozas, ensalada y hasta Pekín.",
+      concept: "Intenso. Completo. Para paladares sin miedo.",
+      callToAction: "Lo quiero TODO de ti",
+      image: "🔥"
     },
     {
       id: 6,
-      name: "Pato Pizza",
-      description: "Wood-fired pizza with duck, caramelized onions and herbs",
-      price: "$16.99",
-      image: "🍕"
+      name: "Trío del Buen Pico",
+      description: "Jamón de pato curado, croquetas de miel y gouda y pato pekin : un bocado crujiente, uno cremoso, uno untuoso.",
+      concept: "Degustación. Curioso. Para exploradores.",
+      callToAction: "Pico fino, pico feliz",
+      image: "🎯"
     },
     {
       id: 7,
-      name: "Duck Curry",
-      description: "Spicy curry with tender duck and jasmine rice",
-      price: "$15.99",
-      image: "🍛"
+      name: "Pa4to",
+      description: "Cuatro platos icónicos de la casa. Un recorrido por el universo Only PATO.",
+      concept: "Experiencia. Ritual. Colección de clásicos.",
+      callToAction: "Pídelo en nombre del arte",
+      image: "🎨"
     },
     {
       id: 8,
-      name: "Pato Sandwich",
-      description: "Gourmet sandwich with duck breast and avocado",
-      price: "$10.99",
-      image: "🥪"
+      name: "Pato(s)",
+      description: "El menú de grupo: generoso, sabroso y diseñado para que nadie se quede sin probar.",
+      concept: "Festivo. Abundante. Perfecto para compartir.",
+      callToAction: "Somos muchos y queremos pato",
+      image: "🎉"
     }
   ],
   backgroundColor = "bg-blue-50",
@@ -350,12 +358,12 @@ export const DuckMenu = ({
               </p>
               
               <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-4 sm:mb-6">
-                {menuItems[selectedIndex].price}
+                {menuItems[selectedIndex].concept}
               </div>
               
               {/* Order button */}
-              <button className="w-72 group relative inline-flex items-center justify-center gap-3 px-8 py-4 text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-blue-500 to-blue-600 rounded-full hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
-                <span className="relative z-10 animate-pulse">Order Now</span>
+              <button className="w-82 group relative inline-flex items-center justify-center gap-3 px-8 py-4 text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-blue-500 to-blue-600 rounded-full hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                <span className="relative z-10 animate-pulse">{menuItems[selectedIndex].callToAction}</span>
                 <div className="absolute right-6 top-1/2 transform -translate-y-1/2 transition-transform duration-300 group-hover:translate-x-2">
                   <svg 
                     className="w-5 h-5" 
