@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'OnlyPato';
+    src: url('/fonts/Onlypato-Regular.otf');
+}
+
+.font-custom {
+    font-family: 'OnlyPato';
+}
