@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, League_Spartan } from "next/font/google";
 import "./globals.css";
 import "./fonts.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const geistSans = Geist({
+const geistSans = League_Spartan({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
+const geistMono = League_Spartan({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
@@ -29,6 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -65,7 +65,7 @@ export const DuckHeroSection = ({
           </div>
   
           {/* Title with liquid effect */}
-          {false & <h1 className="text-6xl md:text-8xl font-bold text-blue-600 mb-6 relative">
+          <h1 className="sr-only text-6xl md:text-8xl font-bold text-blue-600 mb-6 relative">
             <span className="relative inline-block">
               {title.split('').map((char, index) => (
                 <span
@@ -80,7 +80,7 @@ export const DuckHeroSection = ({
                 </span>
               ))}
             </span>
-          </h1>}
+          </h1>
   
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-blue-900 mb-12 max-w-2xl mx-auto leading-relaxed">
