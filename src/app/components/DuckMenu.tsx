@@ -176,7 +176,7 @@ export const DuckMenu = ({
   };
 
   return (
-    <section className={`relative py-10 sm:py-16 lg:py-20 px-4 sm:px-6 ${backgroundColor} overflow-hidden`}>
+    <section className={`relative py-10 sm:py-16 lg:py-20 px-4 sm:px-6 ${backgroundColor} overflow-hidden backdrop-blur-sm bg-opacity-90`}>
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
