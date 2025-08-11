@@ -3,6 +3,7 @@ import { League_Spartan } from "next/font/google";
 import "./globals.css";
 import "./fonts.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import LaunchModalProvider from "./components/LaunchModalProvider";
 
 const spartanSans = League_Spartan({
   variable: "--font-spartan-sans",
@@ -24,8 +25,10 @@ export default function RootLayout({
       <body
         className={`${spartanSans.variable} antialiased`}
       >
-        {children}
-        <SpeedInsights />
+        <LaunchModalProvider>
+          {children}
+          <SpeedInsights />
+        </LaunchModalProvider>
       </body>
     </html>
   );

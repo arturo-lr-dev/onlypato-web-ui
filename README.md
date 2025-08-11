@@ -1,3 +1,5 @@
+# Only Pato Web UI
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -19,6 +21,20 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Features
+
+### Launch Modal
+
+The site includes a launch modal that appears when users first visit the website. The modal displays a message about the opening date (September 5th) and allows users to enter their email to be notified when the site launches.
+
+#### Holded CRM Integration
+
+The modal integrates with Holded CRM to store user emails. To configure this integration:
+
+1. Rename `.env.local.example` to `.env.local`
+2. Add your Holded API key to the `.env.local` file
+3. Customize the API endpoint in the `.env.local` file if needed
 
 ## Learn More
 
