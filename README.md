@@ -30,11 +30,12 @@ The site includes a launch modal that appears when users first visit the website
 
 #### Holded CRM Integration
 
-The modal integrates with Holded CRM to store user emails. To configure this integration:
+The modal integrates with Holded CRM to store user emails and send them to a specific funnel using the Holded Leads API. To configure this integration:
 
 1. Rename `.env.local.example` to `.env.local`
 2. Add your Holded API key to the `.env.local` file
-3. Customize the API endpoint in the `.env.local` file if needed
+3. The funnel ID is already configured (681e2583df0578e5560e3eb0)
+4. The API endpoint is configured to use the Holded CRM API v1 (`https://api.holded.com/api/crm/v1/leads`)
 
 ## Learn More
 
