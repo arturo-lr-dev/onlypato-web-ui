@@ -47,6 +47,7 @@ const LaunchModal: React.FC<LaunchModalProps> = ({ isOpen, onClose }) => {
       const result = await sendEmailToHolded(email);
       
       if (result.success) {
+        window.gtag('event', 'conversion', {'send_to': 'AW-716306015/Ah3VCJnG5PoYEN_sx9UC'});
         setSubmitSuccess(true);
         setEmail('');
         
