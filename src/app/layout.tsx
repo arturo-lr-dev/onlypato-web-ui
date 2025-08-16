@@ -4,6 +4,7 @@ import "./globals.css";
 import "./fonts.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import LaunchModalProvider from "./components/LaunchModalProvider";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const spartanSans = League_Spartan({
   variable: "--font-spartan-sans",
@@ -29,6 +30,8 @@ export default function RootLayout({
           {children}
           <SpeedInsights />
         </LaunchModalProvider>
+
+        <GoogleAnalytics gaId="G-T1S6HK0WWL" />
       </body>
     </html>
   );
