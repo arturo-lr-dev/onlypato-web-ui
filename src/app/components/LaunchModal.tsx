@@ -31,6 +31,19 @@ const LaunchModal: React.FC<LaunchModalProps> = ({ isOpen, onClose }) => {
     };
   }, [isOpen, onClose]);
 
+  function gtag_report_conversion(url: any) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    window.gtag('event', 'conversion', {
+        'send_to': 'AW-716306015/LGLfCMXegYgbEN_sx9UC',
+        'event_callback': callback
+    });
+    return false;
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -47,7 +60,7 @@ const LaunchModal: React.FC<LaunchModalProps> = ({ isOpen, onClose }) => {
       const result = await sendEmailToHolded(email);
       
       if (result.success) {
-        window.gtag('event', 'conversion', {'send_to': 'AW-716306015/Ah3VCJnG5PoYEN_sx9UC'});
+        gtag_report_conversion('https://www.onlypato.com/');
         setSubmitSuccess(true);
         setEmail('');
         
