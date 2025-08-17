@@ -33,9 +33,7 @@ const LaunchModal: React.FC<LaunchModalProps> = ({ isOpen, onClose }) => {
 
   function gtag_report_conversion(url: any) {
     var callback = function () {
-      if (typeof(url) != 'undefined') {
-        window.location = url;
-      }
+      
     };
     window.gtag('event', 'conversion', {
         'send_to': 'AW-716306015/LGLfCMXegYgbEN_sx9UC',
