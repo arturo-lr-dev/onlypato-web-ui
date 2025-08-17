@@ -1,11 +1,19 @@
 'use client';
 
-import React from 'react';
+import React, { useMemo } from 'react';
 import { DuckHeroSection } from '../components/DuckHeroSection';
 import PromoHeader from '../components/PromoHeader';
 import { DuckMenu } from '../components/DuckMenu';
 
 const Hero = () => {
+
+  useMemo(() => {
+    window.gtag('config', 'G5nLCJahifoYEN_sx9UC', {
+      page_title: 'Home',
+      page_location: '/'
+    });
+  }, []);
+
   return (
     <div className="space-y-8">
       <PromoHeader />
