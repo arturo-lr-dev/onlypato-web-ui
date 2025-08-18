@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export const DuckMenu = ({
   title = "Nuestros menus",
-  subtitle = "Descubre nuestra deliciosa carta de PlATOS",
+  subtitle = "Descubre nuestra deliciosa carta de PLATOS",
   menuItems = [
   {
     id: 1,
@@ -380,8 +380,8 @@ export const DuckMenu = ({
                   src={menuItems[selectedIndex].image} 
                   alt={menuItems[selectedIndex].name} 
                   width={240} 
-                  height={40} 
-                  className="w-full object-cover rounded-t-2xl mb-4 sm:mb-6 mx-auto max-h-[240px]"
+                  height={40}
+                  className="w-full object-cover rounded-t-2xl mb-4 sm:mb-6 mx-auto max-h-[540px]"
                 />
               )}
               
@@ -402,7 +402,7 @@ export const DuckMenu = ({
               </div>
               
               {/* Order button */}
-              <button className="w-82 group relative inline-flex items-center justify-center gap-3 px-8 py-4 text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-[#FDBB43] to-[#fca311] rounded-full hover:from-[#fca311] hover:to-[#fb8500] transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+              {false && <button className="w-82 group relative inline-flex items-center justify-center gap-3 px-8 py-4 text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-[#FDBB43] to-[#fca311] rounded-full hover:from-[#fca311] hover:to-[#fb8500] transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
                 <span className="relative z-10 animate-pulse">{menuItems[selectedIndex].callToAction}</span>
                 <div className="absolute right-6 top-1/2 transform -translate-y-1/2 transition-transform duration-300 group-hover:translate-x-2">
                   <svg 
@@ -420,7 +420,7 @@ export const DuckMenu = ({
                   </svg>
                 </div>
                 <div className="absolute inset-0 rounded-full bg-[#FDBB43] transform scale-0 group-hover:scale-110 transition-transform duration-300 opacity-20"></div>
-              </button>
+              </button>}
               </div>
             </div>
           </div>
