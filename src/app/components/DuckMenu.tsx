@@ -8,72 +8,95 @@ export const DuckMenu = ({
   title = "Nuestros menus",
   subtitle = "Descubre nuestra deliciosa carta de PlATOS",
   menuItems = [
-    {
-      id: 1,
-      name: "Pa Mí",
-      description: "Gyozas, alitas y arepa de pato. Todo lo que necesitas para darte un homenaje sin compartir ni explicar.",
-      concept: "Individual. Autocomplaciente. Decadente.",
-      callToAction: "Me lo merezco",
-      image: "/ducks/1.png"
-    },
-    {
-      id: 2,
-      name: "Pato Fit",
-      description: "Jamón de pato curado, ensalada fresca y confit ligero. Sano, sabroso y sin remordimientos.",
-      concept: "Equilibrado. Proteico. Consciente.",
-      callToAction: "Fit pero con sabor",
-      image: "/ducks/2.png"
-    },
-    {
-      id: 3,
-      name: "Pa los Dos",
-      description: "Un menú generoso para compartir: variedad de platos de pato y final dulce.",
-      concept: "Compartido. Íntimo. Para dos bocas felices.",
-      callToAction: "Para compartir sin pelear",
-      image: "/ducks/3.png"
-            
-    },
-    {
-      id: 4,
-      name: "Pato Light & Love",
-      description: "Ensalada de magret ahumado, bresaola de pato y toques cítricos. Fresco, delicado y lleno de sabor. Y confit!",
-      concept: "Ligero. Delicado. Amor a primera mordida.",
-      callToAction: "Amor en versión ligera",
-      image: "/ducks/4.png"
-    },
-    {
-      id: 5,
-      name: "Pato Lover",
-      description: "Para fans del pato sin límites: gyozas, ensalada y hasta Pekín.",
-      concept: "Intenso. Completo. Para paladares sin miedo.",
-      callToAction: "Lo quiero TODO de ti",
-      image: "/ducks/5.png"
-    },
-    {
-      id: 6,
-      name: "Trío del Buen Pico",
-      description: "Jamón de pato curado, croquetas de miel y gouda y pato pekin : un bocado crujiente, uno cremoso, uno untuoso.",
-      concept: "Degustación. Curioso. Para exploradores.",
-      callToAction: "Pico fino, pico feliz",
-      image: "/ducks/6.png"
-    },
-    {
-      id: 7,
-      name: "Pa4to",
-      description: "Cuatro platos icónicos de la casa. Un recorrido por el universo Only PATO.",
-      concept: "Experiencia. Ritual. Colección de clásicos.",
-      callToAction: "Pídelo en nombre del arte",
-      image: "/ducks/7.png"
-    },
-    {
-      id: 8,
-      name: "Pato(s)",
-      description: "El menú de grupo: generoso, sabroso y diseñado para que nadie se quede sin probar.",
-      concept: "Festivo. Abundante. Perfecto para compartir.",
-      callToAction: "Somos muchos y queremos pato",
-      image: "/ducks/8.png"
-    }
-  ],
+  {
+    id: 1,
+    name: "Muslitos Hoisin",
+    description: "Muslitos de pato glaseados con salsa hoisin, dulces y pegajosos como deben ser.",
+    concept: "Clásico. Irresistible. Para chuparse los dedos.",
+    callToAction: "No puedes comer solo uno",
+    image: "/ducks/1.png"
+  },
+  {
+    id: 2,
+    name: "Croquetas de Gouda y Miel",
+    description: "Crujientes por fuera, cremosas por dentro. El equilibrio perfecto entre salado y dulce.",
+    concept: "Cremoso. Dorado. Adictivo.",
+    callToAction: "La perfección en forma de croqueta",
+    image: "/ducks/2.png"
+  },
+  {
+    id: 3,
+    name: "Gyozas de Pato",
+    description: "Empanadillas orientales rellenas de pato jugoso, selladas a la plancha para ese toque crujiente.",
+    concept: "Oriental. Jugoso. Artesanal.",
+    callToAction: "Oriente en cada mordisco",
+    image: "/ducks/3.png"
+  },
+  {
+    id: 4,
+    name: "Bresaola de Pato",
+    description: "Finas láminas de pato curado, delicado y aromático. Puro sabor en su máxima expresión.",
+    concept: "Curado. Delicado. Refinado.",
+    callToAction: "Sofisticación en láminas",
+    image: "/ducks/4.png"
+  },
+  {
+    id: 5,
+    name: "Bombas de la Barceloneta",
+    description: "Explosivas croquetas XXL rellenas de pato, que hacen honor a su nombre barcelonés.",
+    concept: "Explosivo. Generoso. Barcelonés.",
+    callToAction: "Prepárate para la explosión",
+    image: "/ducks/5.png"
+  },
+  {
+    id: 6,
+    name: "Confit de Pato con Guarnición",
+    description: "El clásico confit de pato, tierno y jugoso, acompañado de su guarnición perfecta.",
+    concept: "Clásico. Tierno. Tradicional.",
+    callToAction: "El pato como debe ser",
+    image: "/ducks/6.png"
+  },
+  {
+    id: 7,
+    name: "El Ritual del Pato Pekín",
+    description: "La ceremonia completa del pato Pekín: piel crujiente, carne jugosa y todo el ritual que merece.",
+    concept: "Ceremonial. Auténtico. Experiencia.",
+    callToAction: "Vive la experiencia completa",
+    image: "/ducks/7.png"
+  },
+  {
+    id: 8,
+    name: "Ensalada Verde Refrescante",
+    description: "El respiro fresco que necesitas entre tanto pato. Verde, crujiente y llena de vida.",
+    concept: "Fresco. Equilibrio. Revitalizante.",
+    callToAction: "El descanso que mereces",
+    image: "/ducks/8.png"
+  },
+  {
+    id: 9,
+    name: "Rabanitos Encurtidos",
+    description: "Pequeños y punzantes, limpian el paladar y añaden ese toque ácido perfecto.",
+    concept: "Limpio. Punzante. Refrescante.",
+    callToAction: "El toque que lo cambia todo",
+    image: "/ducks/9.png"
+  },
+  {
+    id: 10,
+    name: "Cheesecake Vasco",
+    description: "La tarta de queso que conquista paladares, cremosa y con ese toque vasco inconfundible.",
+    concept: "Cremoso. Vasco. Seductor.",
+    callToAction: "El final perfecto",
+    image: "/ducks/10.png"
+  },
+  {
+    id: 11,
+    name: "Trufas de Chocolate",
+    description: "Pequeñas joyas de chocolate que cierran la experiencia con elegancia y intensidad.",
+    concept: "Intenso. Elegante. Adictivo.",
+    callToAction: "El broche de oro",
+    image: "/ducks/11.png"
+  }
+],
   backgroundColor = "bg-blue-50",
   showDuckDecorations = true
 }) => {
@@ -345,7 +368,7 @@ export const DuckMenu = ({
           </div>
 
           {/* Selected Item Display */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border-4 border-blue-200 max-w-md w-full mx-4 sm:mx-0">
+          <div className="bg-white rounded-3xl shadow-2xl border-4 border-blue-200 max-w-md w-full mx-4 sm:mx-0">
             <div className="text-center">
               {/* Selected item image */}
               {!menuItems[selectedIndex].image.includes('/') ? (
@@ -356,16 +379,14 @@ export const DuckMenu = ({
                 <Image 
                   src={menuItems[selectedIndex].image} 
                   alt={menuItems[selectedIndex].name} 
-                  width={40} 
+                  width={240} 
                   height={40} 
-                  className="w-30 h-30 object-cover rounded-2xl mb-4 sm:mb-6 mx-auto"
+                  className="w-full object-cover rounded-t-2xl mb-4 sm:mb-6 mx-auto max-h-[240px]"
                 />
               )}
               
               {/* Decorative duck */}
-              <div className="flex justify-center mb-4 sm:mb-6 opacity-30">
-                <DuckIcon size="normal" />
-              </div>
+              <div className='p-6 sm:p-8'>
               
               {/* Selected item details */}
               <h3 className="text-xl sm:text-2xl font-bold text-blue-700 mb-3 sm:mb-4">
@@ -400,6 +421,7 @@ export const DuckMenu = ({
                 </div>
                 <div className="absolute inset-0 rounded-full bg-[#FDBB43] transform scale-0 group-hover:scale-110 transition-transform duration-300 opacity-20"></div>
               </button>
+              </div>
             </div>
           </div>
         </div>
