@@ -102,45 +102,37 @@ const LaunchModal: React.FC<LaunchModalProps> = ({ isOpen, onClose }) => {
         </button>
         
         <div className="text-center mb-6">
-          <h2 className="text-2xl font-bold mb-2 text-blue-500">¡Próximamente!</h2>
-          <p className="text-lg text-blue-500">Abriremos el 5 de septiembre</p>
-        </div>
-        
-        {submitSuccess ? (
-          <div className="text-center py-4">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto text-green-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-            </svg>
-            <p className="text-lg font-medium">¡Gracias por suscribirte!</p>
-            <p className="text-sm text-gray-600">Te avisaremos cuando abramos.</p>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                Recibe una notificación cuando abramos
-              </label>
-              <input
-                type="email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Tu email"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 text-black"
-                disabled={isSubmitting}
-                required
-              />
-              {submitError && <p className="mt-1 text-sm text-red-600">{submitError}</p>}
-            </div>
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-md transition duration-200 disabled:opacity-70"
+          <h2 className="text-2xl font-bold mb-2 text-blue-500">¡Encuéntranos en!</h2>
+          
+          <div className="flex flex-col space-y-6 mt-8">
+            <a 
+              href="https://www.ubereats.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block"
             >
-              {isSubmitting ? 'Enviando...' : 'Notifícame'}
-            </button>
-          </form>
-        )}
+              <img 
+                src="./ubereats.png" 
+                alt="Uber Eats" 
+                className="h-24 w-auto mx-auto my-4"
+              />
+            </a>
+            {false &&
+            <a 
+              href="https://www.globo.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <img 
+                src="./globo.png" 
+                alt="Globo" 
+                className="h-24 w-auto mx-auto my-4"
+              />
+            </a>
+            }
+          </div>
+        </div>
       </div>
     </div>
   );

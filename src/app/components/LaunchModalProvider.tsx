@@ -11,7 +11,7 @@ const LaunchModalProvider: React.FC<{ children: React.ReactNode }> = ({ children
     // Verificar si el modal ya se ha mostrado en esta sesión
     const hasModalBeenShown = sessionStorage.getItem('launchModalShown');
     
-    if (!hasModalBeenShown) {
+    if (true) {
       // Pequeño retraso para mostrar el modal después de que la página se cargue
       const timer = setTimeout(() => {
         setIsModalOpen(true);
